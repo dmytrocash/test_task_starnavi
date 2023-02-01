@@ -45,15 +45,15 @@ def test_sign_up_success(client):
 
 def test_sign_up_failed_short_password(client):
     response = client.post('/users', json={'email': 'example@example.com', 'password': '1234'})
-    assert response.status_code == 400
+    assert response.status_code == 401
     assert "Password should be more than 8 characters" in response.text
 
 
-def test_email_doesnt_exist_login_failed(client):
+def test_user_doesnt_exist_login_failed(client):
     client.post('/users', json={'email': 'example@example.com', 'password': '12345678'})
     response = client.post('/login', json={'email': 'example123@example.com', 'password': '12345678'})
     assert response.status_code == 401
-    assert 'Wrong email. Try again.' in response.text
+    assert 'Wrong email or password. Try again.' in response.text
 
 
 def test_post_create_success(client):
