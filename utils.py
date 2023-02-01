@@ -3,6 +3,7 @@ import bcrypt
 import re
 
 
+# TODO: env var
 SALT = b'$2b$12$LxwRsweKXFfzmu/vk4S8AO'
 
 

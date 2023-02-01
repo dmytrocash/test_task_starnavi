@@ -12,6 +12,7 @@ class User(db.Model):
     last_action: str
 
     id = db.Column(db.Integer, primary_key=True)
+    # TODO: make index
     email = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(100), nullable=False)
     created_at = db.Column(db.DateTime(timezone=True), default=func.now(), nullable=False)
