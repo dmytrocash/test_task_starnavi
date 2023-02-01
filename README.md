@@ -45,10 +45,11 @@ Notes:
 
 ## Overview
 * `main.py` - the entrypoint. 
-* `models.py` - basic models User, Post and Like for creating and authorizing users, creating posts, making likes and dislikes.
-* `utils.py` - helper functions.
-* `db.py` - SQLAlchemy object for easy communication with database.
 * `test_main.py` - basic tests written with Pytest.
+* `utils.py` - helper functions.
+* `test_utils.py` - basic unit tests for helper functions.
+* `models.py` - basic models User, Post and Like for creating and authorizing users, creating posts, making likes and dislikes.
+* `db.py` - SQLAlchemy object for easy communication with database.
 * `constraints.json` - config file with rules for `bot.py`.
 * `bot.py` - separate python script for creating users, posts and making likes accordingly to the rules described in `constraints.json`.
 * `requirements.txt` - a list of all project dependencies.
@@ -69,8 +70,11 @@ First start the server (follow the instructions above). Then run the bot:
 python3 bot.py
 ```
 ## Tests
-A single test file can be run using next command:
+`test_main.py` can be run using next command:
 ```bash
-python3 -m pytest test_main.py
+python3 -m pytest test/test_main.py
 ```
-
+`test_utils.py` can be run using next command:
+```bash
+python3 -m unittest tests/test_utils.py
+```
