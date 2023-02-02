@@ -1,7 +1,6 @@
 import unittest
 
-from utils import validate_post_body, validate_signup_body, get_password_hash, \
-    encode_user_data, decode_user_token, SALT
+from utils import validate_post_body, validate_signup_body
 
 
 class ValidationTestCase(unittest.TestCase):
