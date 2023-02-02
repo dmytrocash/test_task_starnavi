@@ -55,7 +55,7 @@ Notes:
 * `requirements.txt` - a list of all project dependencies.
 
 ## Requirements
-* Install the requirements:
+Install the requirements:
 ```bash
 pip3 install -r requirements.txt
 ```
